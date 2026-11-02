@@ -1,12 +1,12 @@
 {
  "code": {
-  "version": "2026.11.02-r3",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.02-r3.zip",
-  "sha256": "8e85633282f8e6a09ed44b8ce45c3bde739b3e47662af69f2eb9b90288864778",
-  "size": 4582135,
-  "changelog": "2026.11.02-r3 更新说明\n\n· 热更新通道重做（本版重点）：直连 github.com 在部分网络彻底不通（连接卡死\n  10 秒无响应），旧版只有一个下载地址 → 每次检查都失败，界面还只显示「已是\n  最新」，完全看不出是断网。现在：\n    - 更新源改为**多源串行回退**：GitHub 直连 → gh-proxy.com → ghfast.top\n      → jsDelivr 镜像，任一可用即成功；\n    - 代码包同样逐源回退，sha256 不符/超时自动换下一个源；\n    - 单源下载给足 15 分钟总时长（慢速镜像约 260KB/s 也能下完）；\n    - 暂存目录改名遇到杀软扫描占用会自动退避重试（5 次）。\n\n· 新增**离线更新包**：把 code-<版本>.zip 放进程序的 data/update/ 目录，重启\n  后自动安装，完全不依赖网络。网络实在不通时让维护者把包发过来即可。\n\n· 更新失败不再静默：设置页会显示「检查更新失败（网络受限）」，鼠标停住可看\n  全部手动下载地址；更新弹窗失败时会提示离线包该放哪个目录。\n\n· 包内版本号与期望不符、加密校验失败、关键文件缺失的更新包一律拒绝安装，不会\n  污染版本目录；本地放错版本的离线包会被忽略。\n\n上一版（2026.11.02-r2）内容：\n· 修复左列图标整列上移 14px 时被判「不在主界面 / 未找到模板: 玩法」（锚点改\n  为先窄区域、miss 后放宽复测）。\n· 钟馗捉鬼：点「前往」之前先读玩法地图节点的今日进度 n/10，已打满直接收工；\n  捉鬼链超时不再当「完成」上报。\n· 每日竞技：战斗等待超时后回竞技场页复核免费挑战次数，确实消耗就按「本场\n  已打」收工。\n· AI 兜底禁止点进妖灵渡口/九霄塔（宠物面板），已停在面板里则先按 ESC 退出。",
+  "version": "2026.11.02-r4",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.02-r4.zip",
+  "sha256": "5f6e3ebadb5ba5fffdffda3501cfca8c3d0388d49f731bb72ea638a5eaf28662",
+  "size": 4581460,
+  "changelog": "2026.11.02-r4\n桌宠动作系统改版（三态规则）：\n- 空闲：不再持续立转，改为「瞌睡 / 走路」随机循环（睡 8~20s 自然醒，走完接挥手）\n- 任务中：不断循环转圈（spin 帧 ~3.3s 一圈）\n- 任务结束：无论成败都欢呼（成功 ✨🎉 庆祝，失败 💧 道歉）\n修复：打盹态挡住动作结束检查导致睡死的问题；3 分钟无交互强制打盹同样走动作池自然醒。\n清理：空闲立转相关的四视角立绘死代码（_views/_spin_views/_load_views）。\n自检：debug/_verify_20261102_pet_actions.py 14/0；_verify_pet.py 35/35；GUI 冒烟通过。",
   "min_runtime": "",
-  "published_at": "2026-11-02 16:17:01"
+  "published_at": "2026-11-02 17:22:34"
  },
  "full": {
   "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.02.zip"
