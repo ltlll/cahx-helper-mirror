@@ -1,12 +1,12 @@
 {
  "code": {
-  "version": "2026.11.04-r2",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r2.zip",
-  "sha256": "50facfc583eb789239b5f12a3b1812e99de8a23601dda728a63f94638981205a",
-  "size": 4627945,
-  "changelog": "新增：一条龙配置支持按账号单独设置种菜配方\n- 一条龙定时任务第③步成员列表新增「种菜配方」列（勾选种菜后可编辑），每个账号可各选各的配方，默认「自动」保持原有行为\n- 未单独配置的账号自动回落到任务级/全局配置，老配置完全兼容\n- 其余无改动",
+  "version": "2026.11.04-r3",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r3.zip",
+  "sha256": "60175af71dbca107e2070fe21a9b6f554b4c13e436474306821bc40db25a33bc",
+  "size": 4628431,
+  "changelog": "修复：一条龙配置第③步「每人任务」显示不全\n- 5 个成员列横向溢出弹窗宽度，右侧列被裁掉——根因是「全选/清空」链接按钮继承了全局 80px 最小宽度\n- 链接按钮压回 40px 最小宽；种菜配方下拉只显示菜名（完整配料移到悬停提示），不再把列撑宽",
   "min_runtime": "",
-  "published_at": "2026-11-04 00:54:01"
+  "published_at": "2026-11-04 01:09:20"
  },
  "full": {
   "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.04.zip"
