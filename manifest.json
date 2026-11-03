@@ -1,12 +1,12 @@
 {
  "code": {
-  "version": "2026.11.04-r1",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r1.zip",
-  "sha256": "012f609678e64128b3092bac9d2ce6bb2c644a4569425df69e0682a536c09f38",
-  "size": 4625960,
-  "changelog": "新增：种菜支持美食配方\n- 开始任务向导勾选「种菜」后可选 10 种美食配方（大乱炖/麻辣烫/桃花酿/清补凉/相思卷/白玉糕/龙凤卷饼/仙跳墙/鲜花饼/千层饼），默认「自动」保持原有行为\n- 选配方后：播种按配方原料 OCR 定位作物格去种（支持面板滚动、逐视野播种）\n- 制作台按配方备料：先「放回」清锅 → 从食材格把配方食材点进锅 → 再制作；某食材缺货时自动用任意未选中的食材顶替\n- 修复：配方播种跨视野坐标漂移、滚动到底后上排作物找不回的问题",
+  "version": "2026.11.04-r2",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r2.zip",
+  "sha256": "50facfc583eb789239b5f12a3b1812e99de8a23601dda728a63f94638981205a",
+  "size": 4627945,
+  "changelog": "新增：一条龙配置支持按账号单独设置种菜配方\n- 一条龙定时任务第③步成员列表新增「种菜配方」列（勾选种菜后可编辑），每个账号可各选各的配方，默认「自动」保持原有行为\n- 未单独配置的账号自动回落到任务级/全局配置，老配置完全兼容\n- 其余无改动",
   "min_runtime": "",
-  "published_at": "2026-11-04 00:12:15"
+  "published_at": "2026-11-04 00:54:01"
  },
  "full": {
   "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.04.zip"
