@@ -1,14 +1,14 @@
 {
  "code": {
-  "version": "2026.11.02-r4",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.02-r4.zip",
-  "sha256": "5f6e3ebadb5ba5fffdffda3501cfca8c3d0388d49f731bb72ea638a5eaf28662",
-  "size": 4581460,
-  "changelog": "2026.11.02-r4\n桌宠动作系统改版（三态规则）：\n- 空闲：不再持续立转，改为「瞌睡 / 走路」随机循环（睡 8~20s 自然醒，走完接挥手）\n- 任务中：不断循环转圈（spin 帧 ~3.3s 一圈）\n- 任务结束：无论成败都欢呼（成功 ✨🎉 庆祝，失败 💧 道歉）\n修复：打盹态挡住动作结束检查导致睡死的问题；3 分钟无交互强制打盹同样走动作池自然醒。\n清理：空闲立转相关的四视角立绘死代码（_views/_spin_views/_load_views）。\n自检：debug/_verify_20261102_pet_actions.py 14/0；_verify_pet.py 35/35；GUI 冒烟通过。",
+  "version": "2026.11.04-r1",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r1.zip",
+  "sha256": "012f609678e64128b3092bac9d2ce6bb2c644a4569425df69e0682a536c09f38",
+  "size": 4625960,
+  "changelog": "新增：种菜支持美食配方\n- 开始任务向导勾选「种菜」后可选 10 种美食配方（大乱炖/麻辣烫/桃花酿/清补凉/相思卷/白玉糕/龙凤卷饼/仙跳墙/鲜花饼/千层饼），默认「自动」保持原有行为\n- 选配方后：播种按配方原料 OCR 定位作物格去种（支持面板滚动、逐视野播种）\n- 制作台按配方备料：先「放回」清锅 → 从食材格把配方食材点进锅 → 再制作；某食材缺货时自动用任意未选中的食材顶替\n- 修复：配方播种跨视野坐标漂移、滚动到底后上排作物找不回的问题",
   "min_runtime": "",
-  "published_at": "2026-11-02 17:22:34"
+  "published_at": "2026-11-04 00:12:15"
  },
  "full": {
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.02.zip"
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.04.zip"
  }
 }
