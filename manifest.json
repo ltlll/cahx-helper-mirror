@@ -1,12 +1,12 @@
 {
  "code": {
-  "version": "2026.11.04-r3",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r3.zip",
-  "sha256": "60175af71dbca107e2070fe21a9b6f554b4c13e436474306821bc40db25a33bc",
-  "size": 4628431,
-  "changelog": "修复：一条龙配置第③步「每人任务」显示不全\n- 5 个成员列横向溢出弹窗宽度，右侧列被裁掉——根因是「全选/清空」链接按钮继承了全局 80px 最小宽度\n- 链接按钮压回 40px 最小宽；种菜配方下拉只显示菜名（完整配料移到悬停提示），不再把列撑宽",
+  "version": "2026.11.04-r4",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r4.zip",
+  "sha256": "16da3c33aa3fe013d4afdefa0b7b15af3fb13801a1d595cf24aabcac3244427c",
+  "size": 4628839,
+  "changelog": "修复：05:30 定时任务一条龙启动即崩（整轮 0 项执行）\n- 根因：一条龙入口的日志行误用了 self._acc_by_id（该属性只在弹窗类里，TasksTab 上没有）；方案配了「按账号配方」时才会走到这句，所以今天首次触发就整轮中断\n- 兜底：定时触发抛异常不再静默吞掉整轮——记 ERROR + traceback 并回滚今日标记，稍后自动重试\n- 受影响的今天早上那条一条龙：重启软件后会自动补跑（今日标记仍为空）",
   "min_runtime": "",
-  "published_at": "2026-11-04 01:09:20"
+  "published_at": "2026-11-04 10:14:16"
  },
  "full": {
   "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.04.zip"
