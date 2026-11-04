@@ -1,12 +1,12 @@
 {
  "code": {
-  "version": "2026.11.04-r4",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r4.zip",
-  "sha256": "16da3c33aa3fe013d4afdefa0b7b15af3fb13801a1d595cf24aabcac3244427c",
-  "size": 4628839,
-  "changelog": "修复：05:30 定时任务一条龙启动即崩（整轮 0 项执行）\n- 根因：一条龙入口的日志行误用了 self._acc_by_id（该属性只在弹窗类里，TasksTab 上没有）；方案配了「按账号配方」时才会走到这句，所以今天首次触发就整轮中断\n- 兜底：定时触发抛异常不再静默吞掉整轮——记 ERROR + traceback 并回滚今日标记，稍后自动重试\n- 受影响的今天早上那条一条龙：重启软件后会自动补跑（今日标记仍为空）",
+  "version": "2026.11.04-r5",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.04-r5.zip",
+  "sha256": "2361c16281e22732a46c03b134943cce128d5f391d7066b28b6ff16550ff1714",
+  "size": 4633540,
+  "changelog": "r5 · 2026-11-04\n\n• 修复「种菜只种上一种食材」：播种面板第二行作物（甘蔗/西瓜等）的点击点超出客户区高度，\n  被落点守卫全部丢弃。现在点击点自动钳进可视区，点露头卡片的可见部分即可命中。\n• 按配方播种时若第三种作物在面板更下面（南瓜/蟠桃），会自动上滑换视野去找，\n  并校验滚动确实生效，不再空转。\n• 收工时日志给出「本次播种确认：甘蔗×N、西瓜×N、南瓜×N」，配方里有作物一次都没点到\n  会明确警告（dish_crop_unreachable），不再静默少种一种。\n• 每种作物每轮固定 3 下，避免配比失衡（此前出现过整块地全被南瓜占满）。",
   "min_runtime": "",
-  "published_at": "2026-11-04 10:14:16"
+  "published_at": "2026-11-04 22:25:50"
  },
  "full": {
   "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.04.zip"
