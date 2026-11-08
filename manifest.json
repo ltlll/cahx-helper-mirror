@@ -1,14 +1,14 @@
 {
  "code": {
-  "version": "2026.11.06-r6",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.06-r6.zip",
-  "sha256": "44c48c9f1c3e60006f7646faf75a44dfbfe29892e5993c386b3f1d3fe1fbd187",
-  "size": 4636683,
-  "changelog": "r6 · 2026-11-06\n\n一、修掉「组队连环失败」（打地鼠/一条龙组队副本全灭的真因）\n\n- 现象：11-05 起所有需要组队的任务一律「组队未成功」（zudui / haishi / liudao /\n  zhongkui / 打地鼠），单人任务全部正常。\n- 根因：一键组队在「帮会 → 编队」页发邀请，而这个面板保留了顶部 HUD、左缘还能\n  匹配到「商城」锚点，`on_main_screen()` 判成主界面 → `exit_panel_to_home()`\n  直接收工，面板根本没关。紧接着队长端在右上窄区读队伍人数，读到的其实是帮会\n  徽章旁的**服务器名**（「荣耀-天极12」「荣耀·奶茶」…），人数恒为 1~2 人 →\n  判 4 人缺席 → **解散已经组好的 5 人队** → 转手动组队又因面板残留判「非单人\n  状态」→ 60s×3 后判负。\n- 修复：\n  * 新增 `on_guild_panel()`，识别帮会/编队面板（成员/编队/新闻 ≥2，或 帮会资金/\n    队伍需求/一键组队）；\n  * `exit_panel_to_home()` 在主界面判定为真后再复核一次，是帮会面板就点\n    左下返回箭头（(45,688)，真机截图量到的圆盘中心）关掉；\n  * `_member_row_like()` 过滤区服标签（「荣耀天极12」「荣耀-天极12」「荣耀·奶茶」\n    等），不再当队员数；注意「奶茶朝夕相伴109」这种名字+等级必须仍算成员行；\n  * `_team_status_from()` 增加正向证据：队员端「已接受本轮邀请」+ 队长自己必然\n    在队，队长端读不到名字也不许判缺席（不再解散真队伍）。\n\n二、窗口平铺改为「上对齐」（躲开第三方弹窗）\n\n- 现象：客户端整块贴在右下角，搜狗输入法推广弹窗、游戏内网页公告窗都从右下冒\n  出来，压住客户区右下角的「背包」等图标 → 6 号 05:34 的 eat_cooking 报\n  「等待超时，未找到模板: 背包」判负。\n- 修复：`tile_windows()` 新增 `valign` 参数，默认 `\"top\"`（贴工作区上沿），\n  横向仍右对齐；config.yaml 的 login.tile 增加 `valign: top`（想要旧布局就改成\n  `bottom`）。实机验证：5 个客户端从 y≈636 移到 y=0，客户区 405×720 完整，\n  屏幕下方留出约 640px 给桌面弹窗。\n\n三、种菜按配方只种上一种食材（沿用 r5 的钳制点击修复）\n\n- 播种面板第二行作物名只露头，旧代码点击点 = 名字中心+45 超出 720 高的客户区，\n  被落点守卫静默丢弃。现在点击点一律钳制到 `客户区高-40`，露头卡片点可见部分\n  即可命中；滚动只为「发现下一行」，收工打「本次播种确认：X×N」。\n\n四、自检\n\n- 新增 `debug/_verify_team_guild_panel.py`（26 项，含真机帧：帮会面板必须被判成\n  非主界面、服务器名不算队员、已接受邀请不许判缺席）；\n- `debug/_verify_zhongcai_dish_clip.py` 44 项、`debug/_verify_20261023_tile.py`\n  11 项（含 valign=bottom 回退）、`debug/_verify_teamup_race.py` 17 项全绿；\n- 顺手修 `debug/_verify_team_create_recover.py`、`debug/_verify_updater.py`\n  自身缺桩/打桩不还原的问题。",
+  "version": "2026.11.08-r1",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.08-r1.zip",
+  "sha256": "58afab4ecf52d1549994afb80872dd57ef0aa73a7666d777e063a908d8bde078",
+  "size": 4639371,
+  "changelog": "r1 · 2026-11-08\n\n一、整窗失灵看门狗补盲区（7 号卡聊天面板 4.5h 的根因）\n- 场景复位判负现在会记「场景失联」信号；连续 4 个任务死于未识别场景\n  → 自动换新客户端，不再空转拖死组队\n\n二、全屏聊天面板自动收起（首次支持）\n- 开场复位/逃逸时识别到聊天面板（消息/好友/招募页签列）会点面板外\n  空白或按 ESC 收起，不再整轮困死\n\n三、寻宝入队无响应弹窗自动点取消\n- 「暂无旱魃的队伍接受你的申请…是否创建」驻留弹窗自动关闭，\n  寻宝不再空耗 17 分钟判负",
   "min_runtime": "",
-  "published_at": "2026-11-06 20:48:51"
+  "published_at": "2026-11-08 12:13:54"
  },
  "full": {
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.06.zip"
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.08.zip"
  }
 }
