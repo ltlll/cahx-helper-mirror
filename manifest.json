@@ -1,14 +1,14 @@
 {
  "code": {
-  "version": "2026.11.10-r1",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.10-r1.zip",
-  "sha256": "9ee9cc8309a2218f7cbc3fd8f15ebe3aaf5d384dd1e62ec182d1e3fbe747c5db",
-  "size": 4642740,
-  "changelog": "登录体检防误杀（省电遮罩/信息页浮层先救援再判残废）；AI 兜底 JSON 裸字段容错；zhanling 活动入口兜底前置（OCR 标签直点+清场复判）；种菜做菜每日一次（中午一条龙不再重复空跑）",
+  "version": "2026.11.11-r1",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.11-r1.zip",
+  "sha256": "070c9f362c4fc451f04168b6fc5d50dee9b8d978e72cf2a91ac6f1ff6bc11fe1",
+  "size": 4644193,
+  "changelog": "重跑修复：绑定失效时按角色名自动找回正确客户端（不再兜底到桌面最左窗口跑错号）；活跃奖励领取无响应时自动等待补试（窗口瞬时无响应运行态自愈）",
   "min_runtime": "",
-  "published_at": "2026-11-10 21:33:43"
+  "published_at": "2026-11-11 11:07:57"
  },
  "full": {
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.10.zip"
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.11.zip"
  }
 }
