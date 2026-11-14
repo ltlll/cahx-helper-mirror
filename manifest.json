@@ -1,14 +1,14 @@
 {
  "code": {
-  "version": "2026.11.13-r1",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.13-r1.zip",
-  "sha256": "fae210636bd0ee55bfb778a20fe2a67dfc097263c1054eb7642fd3189421e9c6",
-  "size": 4646455,
-  "changelog": "2026-11-12 早一条龙失败排查修复（13 项失败 → 根因 4 处）\n\n- escape 出不去不再干等：点右缘「离开」3 次失败后自动升级强制恢复（世界地图传送云梦长安），恢复成功不判负；仍失败记场景失联，连续 4 个失联任务自动换新客户端——治 3 号连挂 6 项 45 分钟。\n- 剧情「跳过」点击自证生效：OCR 坐标连点 2 次无效自动改点固定按钮位，4 次仍无效放手转其它出口——治同一点位点空 45 分钟。\n- 场景复位新增「问道/九霄塔面板」出口（点左下返回箭头）。\n- 宗门任务 AI 禁点词：不再点「前往副本·神遗都」「拜访袁天罡」等会把任务链带偏的入口（四次实战复现的老毛病）。\n- AI 兜底要求 click_text 附带坐标兜底，11 次弃权问题修复。",
+  "version": "2026.11.14-r1",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.14-r1.zip",
+  "sha256": "939e563760363c3604b9e20800d60e1202a73fc69adc61247eedf0f5078f49d6",
+  "size": 4647333,
+  "changelog": "登录/公告阶段后台点击：Qt 覆盖层 PostMessage 免抢鼠标（不置前、不动物理光标），进游戏后自动回落原路径。实测「进入游戏」一击命中；离屏自检 18 项全过。",
   "min_runtime": "",
-  "published_at": "2026-11-13 00:15:09"
+  "published_at": "2026-11-14 13:09:57"
  },
  "full": {
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.13.zip"
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.14.zip"
  }
 }
