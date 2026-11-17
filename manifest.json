@@ -1,14 +1,14 @@
 {
  "code": {
-  "version": "2026.11.14-r1",
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-2026.11.14-r1.zip",
-  "sha256": "939e563760363c3604b9e20800d60e1202a73fc69adc61247eedf0f5078f49d6",
-  "size": 4647333,
-  "changelog": "登录/公告阶段后台点击：Qt 覆盖层 PostMessage 免抢鼠标（不置前、不动物理光标），进游戏后自动回落原路径。实测「进入游戏」一击命中；离屏自检 18 项全过。",
+  "version": "20261117-r1",
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/code-20261117-r1.zip",
+  "sha256": "eaff13e04d33e06efebae57445efac251d257236661d8347854d008da5adea39",
+  "size": 4649209,
+  "changelog": "修复六道法门新入口流程（点前往直达副本场景，追踪面板点战）；做菜零产出证据诚实计败+材料不足/做菜到头弹窗收工",
   "min_runtime": "",
-  "published_at": "2026-11-14 13:09:57"
+  "published_at": "2026-11-17 14:08:46"
  },
  "full": {
-  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.14.zip"
+  "url": "https://github.com/ltlll/cahx-helper-updates/releases/download/autoupdate/cahx-helper_2026.11.17.zip"
  }
 }
